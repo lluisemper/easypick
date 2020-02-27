@@ -15,7 +15,8 @@ import Picture from './components/Picture/Picture';
 import Preview from './components/Preview/Preview';
 import Recipes from './components/Recipes/Recipes';
 
-const App = () => {
+
+const App = (props) => {
 
   const [recipes, setRecipes] = useState([]);
   const [images, setImages] = useState([]);
@@ -30,12 +31,6 @@ const App = () => {
       });
   }, []);
 
-  // const getRecipes = async () => {
-  //   const URL_API = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}`;
-  //   const response = await fetch(URL_API);
-  //   const data = await response.json();
-  //   setRecipes(data.hits);
-  // }
 
   const updateSearch = e => {
     setSearch(e.target.value)
@@ -43,7 +38,7 @@ const App = () => {
 
   const getSearch = e => {
     e.preventDefault();
-    getRecipes();
+    // getRecipes();
     setSearch('');
   }
 
@@ -71,17 +66,17 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/picture">
+        <Route exact path="/picture">
           <Picture />
         </Route>
-        <Route path="/picture/tags">
+        <Route exact path="/picture/tags">
           <Preview />
         </Route>
-        <Route path="/picture/tags/recipes">
+        <Route exact path="/picture/tags/recipes">
           <Recipes />
         </Route>
       </Switch>
-      <div className="App">
+      {/* <div className="App">
         <form onSubmit={getSearch} className="search-form">
           <input className="search-bar" type="text" value={search} onChange={updateSearch} />
           <button className="search-button" type="submit">Search</button>
@@ -103,9 +98,10 @@ const App = () => {
             image={recipe.recipe.image}
           />
         ))}
-      </div>
+      </div> */}
     </Router>
   );
 }
 
 export default App;
+

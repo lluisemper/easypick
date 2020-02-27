@@ -4,12 +4,10 @@ import Menu from '../Menu/Menu';
 import {
   BrowserRouter as Router,
   Link,
-  useRouteMatch
 } from "react-router-dom";
 
 const Home = () => {
 
-  let { path, url } = useRouteMatch();
 
   return (
     <div className="Home">

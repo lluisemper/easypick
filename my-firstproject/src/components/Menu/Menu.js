@@ -4,11 +4,7 @@ import { mySearchAction } from '../../actions/uiState';
 import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
   Link,
-  useParams,
-  useRouteMatch
 } from "react-router-dom";
 
 import { AppBar, Toolbar } from '@material-ui/core';
@@ -24,7 +20,7 @@ const Menu = (props) => {
           <input className="search-bar" type="text"
             value={props.searchInput}
             onChange={props.mySearch} />
-          <Link to="/picture/tags/recipies">
+          <Link to="/picture/tags/recipes/">
             <button className="search-button" type="submit">Search</button>
           </Link>
         </Toolbar>
