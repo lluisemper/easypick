@@ -4,7 +4,11 @@ const app = express();
 const cors = require('cors');
 const router = require('./router');
 
+
 const PORT = 4000;
+
+app.use(express.static('public'));
+
 
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));

@@ -7,9 +7,11 @@ const client = new vision.ImageAnnotatorClient({
 
 exports.postPicture = async (req, res) => {
   try {
+    console.log(req);
+    
     const [image] = req.body;
     const myImage = image.split(';base64,').pop();
-    fs.writeFile('./images/image.png', myImage, { encoding: 'base64' }, function (err) {
+    fs.writeFile('./public/image.png', myImage, { encoding: 'base64' }, function (err) {
       console.log('File created');
     });
     res.status(201);
@@ -23,7 +25,7 @@ exports.postPicture = async (req, res) => {
 
 exports.checkPicture = async (req, res) => {
   const results = await client
-    .labelDetection('./images/image.png')
+    .labelDetection('./public/image.png')
       const labels = results[0].labelAnnotations;
       const descriptions = labels.map(label => label.description);
       console.log(labels);

@@ -5,6 +5,8 @@ import {
   BrowserRouter as Router,
   Link,
 } from "react-router-dom";
+import { Button } from '@material-ui/core';
+
 
 const Home = () => {
 
@@ -19,12 +21,13 @@ const Home = () => {
         Worldwide, humanity has created numerous cuisines and culinary arts, including a wide array of ingredients, herbs, spices, techniques, and dishes.
     </p>
       <Link to="/picture">
-        <button type="button">
+        <Button type="button">
           Get Started
-        </button>
+        </Button>
       </Link>
     </div>
   );
 }
 
 export default Home;
+
