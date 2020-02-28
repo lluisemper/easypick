@@ -3,10 +3,7 @@ import './Picture.css';
 import Menu from '../Menu/Menu';
 import Webcam from "react-webcam";
 import ApiClient from '../../ApiClient';
-import {
-  BrowserRouter as Router,
-  Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Picture = () => {
 

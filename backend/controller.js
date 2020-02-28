@@ -7,8 +7,6 @@ const client = new vision.ImageAnnotatorClient({
 
 exports.postPicture = async (req, res) => {
   try {
-    console.log(req);
-    
     const [image] = req.body;
     const myImage = image.split(';base64,').pop();
     fs.writeFile('./public/image.png', myImage, { encoding: 'base64' }, function (err) {

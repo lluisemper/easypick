@@ -1,10 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Menu from '../Menu/Menu';
-import {
-  BrowserRouter as Router,
-  Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from '@material-ui/core';
 
 

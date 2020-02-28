@@ -2,10 +2,7 @@ import React from 'react';
 import './Menu.css';
 import { mySearchAction } from '../../actions/uiState';
 import { connect } from 'react-redux';
-import {
-  BrowserRouter as Router,
-  Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { AppBar, Toolbar } from '@material-ui/core';
 

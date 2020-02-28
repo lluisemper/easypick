@@ -7,8 +7,9 @@ export const mySearchAction = (searchInput) => {
   }
 } 
 
-export const myRecipeSearch = () => {
+export const myTagSelection = (pickTag) => {
   return {
-    type: 'MYRECIPE'
+    type: 'MYTAG',
+    pickTag
   }
 }

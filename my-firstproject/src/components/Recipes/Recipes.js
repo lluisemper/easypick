@@ -4,14 +4,6 @@ import Recipe from '../Recipe/Recipe';
 import Menu from '../Menu/Menu';
 import { connect } from 'react-redux';
 
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link,
-//   useParams,
-//   useRouteMatch
-// } from "react-router-dom";
 const REACT_APP_ID=process.env.REACT_APP_ID;
 const REACT_APP_KEY=process.env.REACT_APP_KEY;
 

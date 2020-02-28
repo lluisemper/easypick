@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import ApiClient from './ApiClient';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,16 +13,6 @@ import Recipes from './components/Recipes/Recipes';
 
 
 const App = () => {
-
-  const [myRecipe, setMyRecipe] = useState([]);
-
-  useEffect(() => {
-    ApiClient.getPictureDescription()
-      .then(recipe => {
-        setMyRecipe(recipe)
-        console.log(recipe);
-      });
-  }, []);
 
   return (
     <Router>
