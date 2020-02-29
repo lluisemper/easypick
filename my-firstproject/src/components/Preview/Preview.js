@@ -4,8 +4,11 @@ import Menu from '../Menu/Menu';
 import ApiClient from '../../ApiClient';
 import { Link } from "react-router-dom";
 import Checktag from '../Checktag/Checktag';
+import { connect } from 'react-redux';
+import * as uiStateActions from '../../actions/uiState';
 
-const Preview = () => {
+const Preview = (props) => {
+  const myString = props.pickTag.toString().replace(/,/g, ' ');
 
   const [myTags, setMyTags] = useState([]);
 
@@ -15,6 +18,14 @@ const Preview = () => {
         setMyTags(tag)
       });
   }, []);
+
+  // I have to change the props.searchInputs per el check tags
+
+  const myRecipeCall = () => {
+    return ApiClient.getRecipes(myString)
+    .then(data => console.log("data", data) || data)
+      .then(recipe => props.myRecipeRender(recipe.hits));
+  }
 
   return (
 
@@ -27,7 +38,7 @@ const Preview = () => {
           tag={tag} />
       )}
       <Link to="/picture/tags/recipes">
-        <button type="button">
+        <button type="button" onClick={() => myRecipeCall()}>
           ✓
         </button>
       </Link>
@@ -35,4 +46,15 @@ const Preview = () => {
   );
 
 }
-export default Preview;
+const mapDispatchToProps = {
+  myRecipeRender: uiStateActions.myRecipeRender
+}
+
+const mapStateToProps = (state) => ({
+  pickTag: state.uiState.pickTag
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Preview);

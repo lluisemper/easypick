@@ -34,27 +34,16 @@ const Menu = (props) => {
 }
 
 
+const mapDispatchToProps = {
+  mySearch: uiStateActions.mySearchAction,
+  myRecipeRender: uiStateActions.myRecipeRender
+}
 
 const mapStateToProps = (state) => ({
   searchInput: state.uiState.searchInput,
   recipes: state.uiState.recipes
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//   // Map your dispatch actions
-//   mySearch: (e) => dispatch(mySearchAction(e.target.value)),
-//   myRecipeRender: (hits) => {
-//     const action = myRecipeRender(hits)
-//     console.log("action", action)
-//     dispatch(action)
-//   }
-  
-// });
-
-const mapDispatchToProps = {
-  mySearch: uiStateActions.mySearchAction,
-  myRecipeRender: uiStateActions.myRecipeRender
-}
 
 export default connect(
   mapStateToProps,

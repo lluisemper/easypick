@@ -7,7 +7,6 @@ const INITIAL_STATE = {
 const uiState = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case "SEARCH":
-      console.log(action);
       return {...state, searchInput:action.searchInput}; //update our store
     case "MYTAG":
       const index = state.pickTag.indexOf(action.pickTag);
@@ -16,7 +15,6 @@ const uiState = (state = INITIAL_STATE, action) => {
       else newPickTags.push(action.pickTag)
       return {...state, pickTag: newPickTags}
     case "MYRECIPERENDER":
-      console.log('state', action.recipes);
       return {...state, recipes: action.recipes}
     default :
       return state

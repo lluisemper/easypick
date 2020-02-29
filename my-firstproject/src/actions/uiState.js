@@ -15,7 +15,6 @@ export const myTagSelection = (pickTag) => {
 }
 
 export const myRecipeRender = (recipes) => {
-  console.log("!!! recipes", recipes)
   return {
     type: 'MYRECIPERENDER',
     recipes
