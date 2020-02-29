@@ -13,3 +13,11 @@ export const myTagSelection = (pickTag) => {
     pickTag
   }
 }
+
+export const myRecipeRender = (recipes) => {
+  console.log("!!! recipes", recipes)
+  return {
+    type: 'MYRECIPERENDER',
+    recipes
+  }
+}

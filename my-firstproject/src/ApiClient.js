@@ -1,7 +1,6 @@
 const BASE_URL = 'http://localhost:4000';
 const APP_ID=process.env.REACT_APP_ID;
 const APP_KEY=process.env.REACT_APP_KEY;
-let mysearch="";
 
 export default {
 
@@ -36,7 +35,6 @@ const fetchRequest = (url, options) => {
 
 const fetchRecipes = (mysearch) => {
   const URL_API = `https://api.edamam.com/search?q=${mysearch}&app_id=${APP_ID}&app_key=${APP_KEY}`;
-  console.log('URL_API', URL_API);
   return fetch(`${URL_API}`)
   .then(res => res.status <= 400 ? res : Promise.reject(res))
   .then(res => res.status === 200 ? res.json() : res)
@@ -45,4 +43,3 @@ const fetchRecipes = (mysearch) => {
   });
 }
 
-// res.status <= 400 ? res : Promise.reject(res)
