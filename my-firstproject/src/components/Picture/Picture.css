@@ -1,1 +1,19 @@
-.Picture {}
+.Picture {
+  border-radius: 7px;
+  margin: 0 auto;
+  width: 50%;
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.clickbutton{
+  position: absolute;
+  bottom: 40px;
+  width: 100px;
+  border-radius: 90px;
+  align-self: center;
+  font-weight: bold;
+  background-color: lightgrey;
+}

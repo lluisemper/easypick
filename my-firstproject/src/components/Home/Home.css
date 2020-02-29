@@ -1,1 +1,19 @@
-.Home {}
+
+.mainContainer{
+width: 80%;
+margin: 0 auto;
+margin-top: 50px;
+font-size: 20px;
+}
+
+#search-button {
+  width: 100px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+}

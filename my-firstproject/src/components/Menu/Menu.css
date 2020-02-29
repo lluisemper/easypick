@@ -1,1 +1,18 @@
-.Menu {}
+.search-bar{
+  width: 300px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 7px;
+  border: none;
+}
+.search-button{
+  width: 100px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}

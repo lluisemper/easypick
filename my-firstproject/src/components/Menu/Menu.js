@@ -4,7 +4,7 @@ import { mySearchAction } from '../../actions/uiState';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import { AppBar, Toolbar } from '@material-ui/core';
+import { AppBar, Toolbar, Button } from '@material-ui/core';
 
 
 

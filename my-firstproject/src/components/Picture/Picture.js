@@ -37,7 +37,7 @@ const Picture = () => {
         width={516}
         videoConstraints={videoConstraints}
       /> 
-        <button onClick={capture}>Capture photo</button>
+        <button className="clickbutton" onClick={capture}>photo</button>
         <Link to="/picture/tags">
         <button type="button">
             ✓
