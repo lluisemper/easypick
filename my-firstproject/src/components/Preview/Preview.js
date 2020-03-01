@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React ,{ useEffect } from 'react';
 import './Preview.css';
 import Menu from '../Menu/Menu';
 import ApiClient from '../../ApiClient';
@@ -10,32 +10,28 @@ import * as uiStateActions from '../../actions/uiState';
 const Preview = (props) => {
   const myString = props.pickTag.toString().replace(/,/g, ' ');
 
-  const [myTags, setMyTags] = useState([]);
-
   useEffect(() => {
     ApiClient.getPictureDescription()
-      .then(tag => {
-        setMyTags(tag)
-      });
+      .then(tag => console.log("tag", tag) || tag)
+      .then(tag => props.myTagRender(tag));
   }, []);
-
-  // I have to change the props.searchInputs per el check tags
 
   const myRecipeCall = () => {
     return ApiClient.getRecipes(myString)
-    .then(data => console.log("data", data) || data)
+      .then(data => console.log("data", data) || data)
       .then(recipe => props.myRecipeRender(recipe.hits));
   }
 
   return (
-
+    
     <div className="Preview">
       <Menu />
       <img src="http://localhost:4000/image.png" alt=""></img>
-      {myTags.map(tag =>
+      {console.log(props.tag)}
+      {props.tag.map(selectedTag => 
         <Checktag
-          key={tag}
-          tag={tag} />
+          key={selectedTag}
+          selectedTag={selectedTag} />
       )}
       <Link to="/picture/tags/recipes">
         <button type="button" onClick={() => myRecipeCall()}>
@@ -47,11 +43,13 @@ const Preview = (props) => {
 
 }
 const mapDispatchToProps = {
-  myRecipeRender: uiStateActions.myRecipeRender
+  myRecipeRender: uiStateActions.myRecipeRender,
+  myTagRender: uiStateActions.myTagRender,
 }
 
 const mapStateToProps = (state) => ({
-  pickTag: state.uiState.pickTag
+  pickTag: state.uiState.pickTag,
+  tag: state.uiState.tag
 });
 
 export default connect(

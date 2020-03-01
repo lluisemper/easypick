@@ -20,3 +20,9 @@ export const myRecipeRender = (recipes) => {
     recipes
   }
 }
+export const myTagRender = (tag) => {
+  return {
+    type: 'MYTAGRENDER',
+    tag
+  }
+}

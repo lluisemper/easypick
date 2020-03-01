@@ -3,13 +3,10 @@ import './Recipes.css';
 import Recipe from '../Recipe/Recipe';
 import Menu from '../Menu/Menu';
 import { connect } from 'react-redux';
-import { myTagSelection } from '../../actions/uiState';
 
 
 const Recipes = (props) => {
   
-  // const [recipes, setRecipes] = useState([]);
-
   return (
     <div className="Recipes">
       <Menu />
@@ -17,9 +14,7 @@ const Recipes = (props) => {
       {props.recipes.map(recipe => (
         <Recipe
           key={recipe.recipe.label}
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
+          recipe={recipe.recipe}
         />
       ))}
     </div>

@@ -6,27 +6,23 @@ import { myTagSelection } from '../../actions/uiState';
 
 
 const Checktag = (props) => {
+console.log('props', props);
 
   return (
     <div className="Checkbox">
       <FormControlLabel
         control={
           <Checkbox
-            value={props.tag}
+            value={props.selectedTag}
             onChange={props.myTagPick}
             color="primary"
           />
         }
-        label={props.tag}
+        label={props.selectedTag}
       />
     </div>
   );
 }
-
-const mapStateToProps = (state) => ({
-  //injects the value of the state
-  pickTag: state.uiState.pickTag
-});
 
 const mapDispatchToProps = (dispatch) => ({
   // Map your dispatch actions
@@ -35,6 +31,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Checktag);
