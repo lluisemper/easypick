@@ -11,8 +11,36 @@
   margin-right: 20px;
   border-radius: 7px;
   border: none;
-  background-color: black;
+  background-color: #3f51b5;
   color: white;
   font-size: 18px;
   font-weight: bolder;
+}
+
+.picture-button {
+  width: 100px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: #3f51b5;
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.filter-button button{
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+
+}
+
+.Menu{
+  display: flex;
+}
+
+.menu-display {
+  justify-content: right;
+  float: right;
 }

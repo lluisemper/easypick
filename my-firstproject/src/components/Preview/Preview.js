@@ -27,7 +27,7 @@ const Preview = (props) => {
     <div className="Preview">
       <Menu />
       <img src="http://localhost:4000/image.png" alt=""></img>
-      {console.log(props.tag)}
+      {console.log('props',props.tag)}
       {props.tag.map(selectedTag => 
         <Checktag
           key={selectedTag}

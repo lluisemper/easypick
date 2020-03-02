@@ -3,7 +3,8 @@ const INITIAL_STATE = {
   searchInput:"",
   pickTag: [],
   recipes: [],
-  tag: []
+  tag: [],
+  filter: ""
 }
 const uiState = (state = INITIAL_STATE, action) => {
   switch(action.type) {
@@ -19,6 +20,8 @@ const uiState = (state = INITIAL_STATE, action) => {
       return {...state, recipes: action.recipes}
     case "MYTAGRENDER":
       return {...state, tag: action.tag}
+    case "MYTAG":
+      return {...state, pickFilter: action.pickFilter}
     default :
       return state
   }

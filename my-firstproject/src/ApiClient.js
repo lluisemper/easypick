@@ -34,7 +34,7 @@ const fetchRequest = (url, options) => {
 };
 
 const fetchRecipes = (mysearch) => {
-  const URL_API = `https://api.edamam.com/search?q=${mysearch}&app_id=${APP_ID}&app_key=${APP_KEY}`;
+  const URL_API = `https://api.edamam.com/search?q=${mysearch}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
   return fetch(`${URL_API}`)
   .then(res => res.status <= 400 ? res : Promise.reject(res))
   .then(res => res.status === 200 ? res.json() : res)

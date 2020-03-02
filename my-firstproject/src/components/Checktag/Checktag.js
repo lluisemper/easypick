@@ -6,7 +6,6 @@ import { myTagSelection } from '../../actions/uiState';
 
 
 const Checktag = (props) => {
-console.log('props', props);
 
   return (
     <div className="Checkbox">
