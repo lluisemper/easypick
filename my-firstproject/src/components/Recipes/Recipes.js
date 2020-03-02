@@ -6,17 +6,19 @@ import { connect } from 'react-redux';
 
 
 const Recipes = (props) => {
-  
+
   return (
     <div className="Recipes">
       <Menu />
       <br></br>
-      {props.recipes.map(recipe => (
-        <Recipe
-          key={recipe.recipe.label}
-          recipe={recipe.recipe}
-        />
-      ))}
+      <div className="wrapper">
+        {props.recipes.map(recipe => (
+          <Recipe
+            key={recipe.recipe.label}
+            recipe={recipe.recipe}
+          />
+        ))}
+      </div>
     </div>
   );
 }

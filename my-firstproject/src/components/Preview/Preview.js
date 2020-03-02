@@ -1,4 +1,4 @@
-import React ,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './Preview.css';
 import Menu from '../Menu/Menu';
 import ApiClient from '../../ApiClient';
@@ -23,21 +23,24 @@ const Preview = (props) => {
   }
 
   return (
-    
+
     <div className="Preview">
       <Menu />
-      <img src="http://localhost:4000/image.png" alt=""></img>
-      {console.log('props',props.tag)}
-      {props.tag.map(selectedTag => 
-        <Checktag
-          key={selectedTag}
-          selectedTag={selectedTag[0].toUpperCase() + selectedTag.slice(1)} />
-      )}
-      <Link to="/picture/tags/recipes">
-        <button type="button" onClick={() => myRecipeCall()}>
-          ✓
+      <div className="wrapperPreview">
+        <img className="image" src="http://localhost:4000/image.png" alt=""></img>
+        <div className="tags">
+          {props.tag.map(selectedTag =>
+            <Checktag
+              key={selectedTag}
+              selectedTag={selectedTag[0].toUpperCase() + selectedTag.slice(1)} />
+          )}
+        <Link to="/picture/tags/recipes">
+          <button type="button" onClick={() => myRecipeCall()}>
+            ✓
         </button>
-      </Link>
+        </Link>
+        </div>
+      </div>
     </div>
   );
 

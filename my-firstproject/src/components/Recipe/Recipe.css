@@ -28,5 +28,7 @@
   max-width: 340px;
   display: flex;
   flex-direction: column;
+  margin: 20px;
+
 }
 

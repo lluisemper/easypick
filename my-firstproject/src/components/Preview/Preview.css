@@ -1,9 +1,33 @@
 .Preview {
   border-radius: 7px;
   margin: 0 auto;
-  max-width: 516px;
   position: relative;
   top: 50px;
-  display: flex;
-  flex-direction: column;
+  max-width: 516px;
+
 }
+.wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.img {
+  margin-right: 200px;
+  position: relative;
+}
+
+.tags {
+  margin-left: 100px;
+  max-height: 375px;
+}
+
+
+.wrapperPreview {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
