@@ -12,7 +12,10 @@ const Recipe = (props) => {
 
   return (
     <div className="Recipe" onClick={handleClick}>
-      <h1>{props.recipe.label}</h1>
+      <div className="headRecipe">
+
+      <h2>{props.recipe.label}</h2>
+      </div>
       {myBoolean ?
         <img src={props.recipe.image} alt="" />
         :

@@ -3,7 +3,7 @@ import './Home.css';
 import Menu from '../Menu/Menu';
 import { Link } from "react-router-dom";
 import { Button } from '@material-ui/core';
-
+import Facebook from '../Facebook/Facebook';
 
 const Home = () => {
 
@@ -21,6 +21,7 @@ const Home = () => {
       <Button id="search-button" component={Link} to="/picture">
         Get Started
       </Button>
+      <Facebook></Facebook>
       </div>
     </div>
   );

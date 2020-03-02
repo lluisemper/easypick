@@ -24,7 +24,7 @@ const Menu = (props) => {
             <div className="filter-button">
               <button href="#" onClick={() => props.myfilterSelection('alcohol-free')}>Alcohol-free</button>
               <button href="#" onClick={() => props.myfilterSelection('vegan')}>Vegan</button>
-              <button href="#" onClick={() => props.myfilterSelection('vegeterian')}> Vegeterian</button>
+              <button href="#" onClick={() => props.myfilterSelection('vegetarian')}> Vegeterian</button>
               <button href="#" onClick={() => props.myfilterSelection('sugar-conscious')}>Sugar-conscious</button>
               <button href="#" onClick={() => props.myfilterSelection('penaut-free')}>Penaut-free</button>
             </div>
