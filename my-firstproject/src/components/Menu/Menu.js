@@ -10,7 +10,7 @@ import { AppBar, Toolbar } from '@material-ui/core';
 const Menu = (props) => {
 
   const myRecipeCall = () => {
-    return ApiClient.getRecipes(props.searchInput)
+    return ApiClient.getRecipes(props.searchInput, props.filter)
       .then(data => console.log("data", data) || data)
       .then(recipe => props.myRecipeRender(recipe.hits));
   }
@@ -62,6 +62,7 @@ const mapDispatchToProps = {
 const mapStateToProps = (state) => ({
   searchInput: state.uiState.searchInput,
   recipes: state.uiState.recipes,
+  filter: state.uiState.filter,
 });
 
 

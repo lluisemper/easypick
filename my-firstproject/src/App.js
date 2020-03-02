@@ -15,12 +15,13 @@ import Recipes from './components/Recipes/Recipes';
 const App = () => {
 
   return (
+
     <Router>
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/picture">
+        <Route exact path="/picture/">
           <Picture />
         </Route>
         <Route exact path="/picture/tags">

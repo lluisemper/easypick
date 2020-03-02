@@ -19,8 +19,8 @@ export default {
     return fetchRequest(`/picture/tags`);
   },
 
-  getRecipes: (mysearch) => {
-    return fetchRecipes(mysearch);
+  getRecipes: (mysearch, filter) => {
+    return fetchRecipes(mysearch, filter);
   }
 }
 
@@ -33,8 +33,8 @@ const fetchRequest = (url, options) => {
     });
 };
 
-const fetchRecipes = (mysearch) => {
-  const URL_API = `https://api.edamam.com/search?q=${mysearch}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
+const fetchRecipes = (mysearch, filter) => {
+  const URL_API = `https://api.edamam.com/search?q=${mysearch}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30${filter ? '&health=' + filter:''}`;
   return fetch(`${URL_API}`)
   .then(res => res.status <= 400 ? res : Promise.reject(res))
   .then(res => res.status === 200 ? res.json() : res)

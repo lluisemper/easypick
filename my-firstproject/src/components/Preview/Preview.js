@@ -31,7 +31,7 @@ const Preview = (props) => {
       {props.tag.map(selectedTag => 
         <Checktag
           key={selectedTag}
-          selectedTag={selectedTag} />
+          selectedTag={selectedTag[0].toUpperCase() + selectedTag.slice(1)} />
       )}
       <Link to="/picture/tags/recipes">
         <button type="button" onClick={() => myRecipeCall()}>

@@ -10,7 +10,7 @@ const Recipes = (props) => {
   return (
     <div className="Recipes">
       <Menu />
-
+      <br></br>
       {props.recipes.map(recipe => (
         <Recipe
           key={recipe.recipe.label}

@@ -1,1 +1,32 @@
-.Recipe {}
+.oneRecipe {
+  border: solid;
+  max-width: 340px;
+  padding: 0px;
+}
+
+.mainIng{
+  background-color: lightgrey;
+  max-width: 0 auto;
+}
+
+.mainIngHead {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.ingredient {
+  margin-top: 3px;
+}
+.secondIngredient {
+  margin-bottom: 0px;
+}
+
+.Recipe {
+  border-radius: 7px;
+  margin: 0 auto;
+  top: 50px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
