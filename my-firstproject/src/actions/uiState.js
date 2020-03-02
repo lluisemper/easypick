@@ -27,9 +27,10 @@ export const myTagRender = (tag) => {
   }
 }
 
-export const myfilterSelection = (pickFilter) => {
+export const myfilterSelection = (filter) => {
   return {
+    
     type: 'MYFILTER',
-    pickFilter
+    filter
   }
 }

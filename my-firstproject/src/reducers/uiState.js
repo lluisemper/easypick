@@ -20,8 +20,11 @@ const uiState = (state = INITIAL_STATE, action) => {
       return {...state, recipes: action.recipes}
     case "MYTAGRENDER":
       return {...state, tag: action.tag}
-    case "MYTAG":
-      return {...state, pickFilter: action.pickFilter}
+    case "MYFILTER":
+    if( state.filter === action.filter) { 
+      return {...state, filter:""}
+    }
+      return {...state, filter: action.filter}
     default :
       return state
   }

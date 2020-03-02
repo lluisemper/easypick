@@ -22,11 +22,11 @@ const Menu = (props) => {
           <div >
             <h1>EasyPick</h1>
             <div className="filter-button">
-              <button href="#">Alcohol-free</button>
-              <button href="#">Vegan</button>
-              <button href="#"> Vegeterian</button>
-              <button href="#">Sugar-conscious</button>
-              <button href="#">Penaut-free</button>
+              <button href="#" onClick={() => props.myfilterSelection('alcohol-free')}>Alcohol-free</button>
+              <button href="#" onClick={() => props.myfilterSelection('vegan')}>Vegan</button>
+              <button href="#" onClick={() => props.myfilterSelection('vegeterian')}> Vegeterian</button>
+              <button href="#" onClick={() => props.myfilterSelection('sugar-conscious')}>Sugar-conscious</button>
+              <button href="#" onClick={() => props.myfilterSelection('penaut-free')}>Penaut-free</button>
             </div>
           </div>
           <div className="menu-display">
@@ -54,12 +54,14 @@ const Menu = (props) => {
 
 const mapDispatchToProps = {
   mySearch: uiStateActions.mySearchAction,
-  myRecipeRender: uiStateActions.myRecipeRender
+  myRecipeRender: uiStateActions.myRecipeRender,
+  myfilterSelection: uiStateActions.myfilterSelection
+
 }
 
 const mapStateToProps = (state) => ({
   searchInput: state.uiState.searchInput,
-  recipes: state.uiState.recipes
+  recipes: state.uiState.recipes,
 });
 
 
