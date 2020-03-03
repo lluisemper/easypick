@@ -1,16 +1,18 @@
 import React from 'react';
-import './Facebook.css';
 import FacebookLogin from 'react-facebook-login';
+import ApiClient from '../../ApiClient';
+
 
 const Facebook = () =>{ 
 
+
   const responseFacebook = (response) => {
-    console.log(response);
+    ApiClient.postToken(response);
   }
 
 return(
   <div className="Facebook">
-    <FacebookLogin
+    <FacebookLogin className="facebook"
   appId="180181013407650"
   autoLoad
   callback={responseFacebook}

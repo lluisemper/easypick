@@ -35,7 +35,7 @@ const Preview = (props) => {
               selectedTag={selectedTag[0].toUpperCase() + selectedTag.slice(1)} />
           )}
         <Link to="/picture/tags/recipes">
-          <button type="button" onClick={() => myRecipeCall()}>
+          <button type="button" className="check-button" onClick={() => myRecipeCall()}>
             ✓
         </button>
         </Link>

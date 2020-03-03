@@ -39,7 +39,7 @@ const Picture = () => {
       /> 
         <button className="clickbutton" onClick={capture}>photo</button>
         <Link to="/picture/tags">
-        <button type="button">
+        <button type="button" className="check-button">
             ✓
         </button>
       </Link>

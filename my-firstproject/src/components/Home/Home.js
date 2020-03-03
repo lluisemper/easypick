@@ -18,9 +18,7 @@ const Home = () => {
           Historically, humans secured food through two methods: hunting and gathering and agriculture, which gave modern humans a mainly omnivorous diet.
           Worldwide, humanity has created numerous cuisines and culinary arts, including a wide array of ingredients, herbs, spices, techniques, and dishes.
   </p>
-      <Button id="search-button" component={Link} to="/picture">
-        Get Started
-      </Button>
+      
       <Facebook></Facebook>
       </div>
     </div>
