@@ -1,5 +1,4 @@
 import React from 'react';
-import './Checktag.css';
 import { Checkbox, FormControlLabel } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { myTagSelection } from '../../actions/uiState';

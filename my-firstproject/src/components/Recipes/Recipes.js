@@ -1,5 +1,4 @@
 import React from 'react';
-import './Recipes.css';
 import Recipe from '../Recipe/Recipe';
 import Menu from '../Menu/Menu';
 import { connect } from 'react-redux';
