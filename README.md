@@ -9,7 +9,7 @@ A simple yet charming recipe book built in React, using Vision API and edamen Fo
 
 ### How to start!
 
-npm i in cd backend && and npm i in cd my-firstsoloproject which you will need to set up a .env file like in the example( the keys they are from facebook developers auth). Also you will need to get the json file from the vision API on the google console.
+npm i in cd backend && and npm i in cd my-firstsoloproject which you will need to set up a .env file like in the example( the keys they are from facebook developers auth). Also you will need to get the json file from the vision API on the google console. Run both servers and database and have fun!
 
 ![env-example](https://user-images.githubusercontent.com/58423269/77761824-e8891980-7038-11ea-9a6f-f3114141de5d.png)
 
